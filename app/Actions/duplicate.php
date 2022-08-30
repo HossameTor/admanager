@@ -12,7 +12,7 @@ class duplicate extends AbstractAction
     }
     public function getTitle()
     {
-        return 'Duplicate';
+        return 'Dupliquer';
     }
 
     public function getIcon()
@@ -34,7 +34,7 @@ class duplicate extends AbstractAction
 
     public function getDefaultRoute()
     {
-        $id = $this->dataType->id;
+        $id = $this->data->id;
         return route('welcome',['id' =>$id]);
     }
 }

@@ -30,3 +30,4 @@ Route::group(['prefix' => 'admin'], function () {
 });
 Route::get('/duplicate/banniere/{id}',[duplicateController::class,'show'])->name('welcome');
 Route::post('/duplicate/banniere/{id}',[duplicateController::class,'duplicate'])->name('postdup');
+Route::post('/bannvues',[bannViews::class,'count']);
