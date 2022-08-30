@@ -5,6 +5,7 @@ use App\Http\Controllers\banndates;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\PositionController;
+use App\Http\Controllers\duplicateController;
 use App\Http\Controllers\bannieresDatesController;
 
 /*
@@ -27,4 +28,5 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-
+Route::get('/duplicate/banniere/{id}',[duplicateController::class,'show'])->name('welcome');
+Route::post('/duplicate/banniere/{id}',[duplicateController::class,'duplicate'])->name('postdup');
