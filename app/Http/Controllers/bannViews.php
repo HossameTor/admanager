@@ -11,5 +11,6 @@ class bannViews extends Controller
         $id = $request->banniereid; 
         $bann = Banniere::find($id);
         $bann->nb_vue->increment();
+        return response()->json(['success'=>'Got Simple Ajax Request.']);
     }
 }

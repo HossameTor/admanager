@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class duplicateController extends Controller
 {
     public function show($id){
-
+    
         return view('duplicate',["id"=>$id]);
     }
     public function duplicate(Request $request,$id){
